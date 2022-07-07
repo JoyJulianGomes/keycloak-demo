@@ -1,0 +1,13 @@
+version: '3.8'
+
+volumes:
+  keycloak-db-store:
+
+services:
+  keycloak:
+    image: jboss/keycloak
+    environment:
+      KEYCLOAK_USER: ${KEYCLOAK_DEFAULT_USER}
+      KEYCLOAK_PASSWORD: ${KEYCLOAK_DEFAULT_PASSWORD}
+    ports:
+      - "8080:8080"
